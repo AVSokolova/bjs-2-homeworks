@@ -21,11 +21,22 @@ function getArrayParams(...arr) {
 }
 
 function summElementsWorker(...arr) {
-
+  const initialValue = 0;
+  const sumElements = arr.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+  return sumElements;
 }
 
 function differenceMaxMinWorker(...arr) {
+  if(arr.length === 0) {
+    return 0;
+  }
+  
+  const differenceMaxMin = Number(Math.max(...arr)) - Number(Math.min(...arr));
 
+  return differenceMaxMin;
 }
 
 function differenceEvenOddWorker(...arr) {
