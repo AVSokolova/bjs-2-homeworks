@@ -13,8 +13,8 @@ Student.prototype.setSubject = function (subjectName) {
 }
 
 Student.prototype.addMarks = function (...marks) {
-  if (this.hasOwnProperty("marks")){
-    this.marks = marks;
+  if (!this.hasOwnProperty("excluded")){
+    this.marks = this.marks.concat(marks);
   }
 }
 
@@ -28,5 +28,5 @@ Student.prototype.getAverage = function () {
 
 Student.prototype.exclude = function (reason) {
   delete this.marks;
-  this.excludeReason = reason;
+  this.excluded = reason;
 }
