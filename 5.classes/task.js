@@ -18,10 +18,14 @@ class PrintEditionItem{
             this._state = value;
         }
     }
+
+    get state(){
+        return this._state;
+    }
     
     fix(){
         this.state = this.state * 1.5;
     }
 
-
 }
+
