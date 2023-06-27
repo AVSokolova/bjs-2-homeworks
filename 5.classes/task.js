@@ -36,3 +36,36 @@ class Magazine extends PrintEditionItem {
     }
 }
 
+
+class Book extends PrintEditionItem {
+    constructor(author, name, releaseDate, pagesCount, state = 100){
+        super(name, releaseDate, pagesCount, state = 100);
+        this.author = author;
+        this.type = "book";
+    }
+}
+
+
+class NovelBook extends Book {
+    constructor(author, name, releaseDate, pagesCount, state = 100){
+        super(author, name, releaseDate, pagesCount, state = 100);
+        this.type = "novel";
+    }
+}
+
+
+class FantasticBook extends Book {
+    constructor(author, name, releaseDate, pagesCount, state = 100){
+        super(author, name, releaseDate, pagesCount, state = 100);
+        this.type = "fantastic";
+    }
+}
+
+
+class DetectiveBook extends Book {
+    constructor(author, name, releaseDate, pagesCount, state = 100){
+        super(author, name, releaseDate, pagesCount, state = 100);
+        this.type = "detective";
+    }
+}
+
