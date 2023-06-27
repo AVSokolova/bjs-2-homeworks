@@ -102,3 +102,22 @@ class Library {
         return null;
     }
 }
+
+
+library = new Library("Горьковская библиотека");
+
+library.addBook(new FantasticBook("Филип К. Дик", "Мечтают ли андроиды об элекстроовцах?", 1968, 320));
+library.addBook(new NovelBook("Эрих Мария Ремарк", "Три товарища", 1936, 480));
+library.addBook(new Magazine("Мурзилка", 1924, 60));
+
+book = library.findBookBy("releaseDate", "1919");
+if(book === null) {
+    library.addBook(new NovelBook("Герман Гессе", "Демиан: История юности, написанная Эмилем Синклером", 1919, 224));
+}
+
+givenBook = library.giveBookByName("Демиан: История юности, написанная Эмилем Синклером");
+
+givenBook.state = 30;
+givenBook.fix();
+
+library.addBook(givenBook);
