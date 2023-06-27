@@ -26,6 +26,13 @@ class PrintEditionItem{
     fix(){
         this.state = this.state * 1.5;
     }
+}
 
+
+class Magazine extends PrintEditionItem {
+    constructor(name, releaseDate, pagesCount, state = 100) {
+        super(name, releaseDate, pagesCount, state = 100);
+        this.type = "magazine"
+    }
 }
 
